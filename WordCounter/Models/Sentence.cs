@@ -33,9 +33,10 @@ namespace WordCounter.Models
       return sentence;
     }
 
-    public List<string> SplitSentence()
+    public string [] SplitSentence(string sentence)
     {
-      List<string> splitSentence = new List<string> {};
+      sentence = InputSentence.ToLower();
+      string [] splitSentence = sentence.Split(' ');
       return splitSentence;
     }
 

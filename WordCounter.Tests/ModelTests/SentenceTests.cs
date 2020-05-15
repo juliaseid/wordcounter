@@ -57,9 +57,9 @@ namespace WordCounter.Tests
     {
       //Arrange
       Sentence newSentence = new Sentence ("bunny", "Bad Bunny isn't really a bunny.");
-      List<string> target = new List<string> {"bad", "bunny", "isn't", "really", "a", "bunny."};
+      string [] target = new string [6] {"bad", "bunny", "isn't", "really", "a", "bunny."};
       //Act
-      List<string> result = newSentence.SplitSentence();
+      string [] result = newSentence.SplitSentence(newSentence.InputSentence);
       //Assert
       CollectionAssert.AreEqual(result, target);
     }

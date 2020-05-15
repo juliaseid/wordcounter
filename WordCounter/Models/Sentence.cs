@@ -33,6 +33,12 @@ namespace WordCounter.Models
       return sentence;
     }
 
+    public List<string> SplitSentence()
+    {
+      List<string> splitSentence = new List<string> {};
+      return splitSentence;
+    }
+
 
   }
 

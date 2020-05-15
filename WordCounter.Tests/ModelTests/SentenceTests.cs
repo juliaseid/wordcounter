@@ -51,5 +51,17 @@ namespace WordCounter.Tests
       //Assert
       Assert.AreEqual(result, "bad bunny isn't really a bunny.");
     }
+
+    [TestMethod]
+    public void SplitSentence_SplitOnSpaces_StringArray()
+    {
+      //Arrange
+      Sentence newSentence = new Sentence ("bunny", "Bad Bunny isn't really a bunny.");
+      List<string> target = new List<string> {"bad", "bunny", "isn't", "really", "a", "bunny."};
+      //Act
+      List<string> result = newSentence.SplitSentence();
+      //Assert
+      CollectionAssert.AreEqual(result, target);
+    }
   }
 }

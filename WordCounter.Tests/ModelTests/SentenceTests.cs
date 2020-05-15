@@ -57,10 +57,27 @@ namespace WordCounter.Tests
     {
       //Arrange
       Sentence newSentence = new Sentence ("bunny", "Bad Bunny isn't really a bunny.");
-      string [] target = new string [6] {"bad", "bunny", "isn't", "really", "a", "bunny."};
+      string [] target = new string [6] {"bad", "bunny", "isnt", "really", "a", "bunny"};
       //Act
       string [] result = newSentence.SplitSentence(newSentence.InputSentence);
       //Assert
+      CollectionAssert.AreEqual(result, target);
+    }
+
+    [TestMethod]
+    public void SplitSentence_RemoveNonAlphas_StringArray()
+    {
+      //Arrange
+      Sentence newSentence = new Sentence ("bunny", "Bad Bunny isn't really a bunny.");
+      string [] target = new string [6] {"bad", "bunny", "isnt", "really", "a", "bunny"};
+      //Act
+      string [] result = newSentence.SplitSentence(newSentence.InputSentence);
+      foreach(string word in result)
+      {
+        Console.WriteLine("word");
+        Console.WriteLine(word);
+      }
+            //Assert
       CollectionAssert.AreEqual(result, target);
     }
   }

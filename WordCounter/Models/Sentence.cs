@@ -32,10 +32,6 @@ namespace WordCounter.Models
           {
             word = word.Remove(j, 1);
           }
-          else
-          {
-            word = word;
-          }
         }
         splitSentence[i] = word;
       }

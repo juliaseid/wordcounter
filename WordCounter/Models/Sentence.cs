@@ -16,8 +16,14 @@ namespace WordCounter.Models
 
     public string FormatWord()
     {
-      string word = InputWord.ToLower();
-      
+      string word = InputWord.Trim().ToLower();
+      for (int i=0; i<word.Length; i++)
+      {
+        if (Char.IsLetter(word, i)==false)
+        {
+          word = word.Remove(i, 1);
+        }
+      }
       return word;
     }
 

@@ -20,10 +20,21 @@ namespace WordCounter.Tests
     }
 
     [TestMethod]
-    public void FormatWord_RemoveRejectWhitespace_String()
+    public void FormatWord_RemoveWhitespace_String()
     {
       //Arrange
       Sentence newSentence = new Sentence("Bunny ", "Bad Bunny isn't really a bunny.");
+      //Act
+      string result = newSentence.FormatWord();
+      //Assert
+      Assert.AreEqual(result, "bunny");
+    }
+
+    [TestMethod]
+    public void FormatWord_RejectNonAlpha_String()
+    {
+      //Arrange
+      Sentence newSentence = new Sentence("Bu nny2", "Bad Bunny isn't really a bunny.");
       //Act
       string result = newSentence.FormatWord();
       //Assert

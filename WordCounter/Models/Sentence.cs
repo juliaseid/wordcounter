@@ -34,7 +34,7 @@ namespace WordCounter.Models
           }
           else
           {
-            word=word;
+            word = word;
           }
         }
         splitSentence[i] = word;

@@ -27,6 +27,13 @@ namespace WordCounter.Models
       return word;
     }
 
+    public string FormatSentence()
+    {
+      string sentence = InputSentence.ToLower();
+      return sentence;
+    }
+
+
   }
 
 }

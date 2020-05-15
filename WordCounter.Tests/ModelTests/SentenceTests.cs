@@ -40,5 +40,16 @@ namespace WordCounter.Tests
       //Assert
       Assert.AreEqual(result, "bunny");
     }
+
+    [TestMethod]
+    public void FormatSentence_ToLowerCase_String()
+    {
+      //Arrange
+      Sentence newSentence = new Sentence ("bunny", "Bad Bunny isn't really a bunny.");
+      //Act
+      string result = newSentence.FormatSentence();
+      //Assert
+      Assert.AreEqual(result, "bad bunny isn't really a bunny.");
+    }
   }
 }

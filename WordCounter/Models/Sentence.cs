@@ -16,7 +16,9 @@ namespace WordCounter.Models
 
     public string FormatWord()
     {
-      return "word";
+      string word = InputWord.ToLower();
+      
+      return word;
     }
 
   }

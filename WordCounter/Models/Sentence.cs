@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Scrabble.Models
+namespace WordCounter.Models
 {
   public class Sentence
   {
@@ -14,7 +14,11 @@ namespace Scrabble.Models
       InputSentence = inputSentence;
     }
 
- 
+    public string FormatWord()
+    {
+      return "word";
+    }
+
   }
 
 }

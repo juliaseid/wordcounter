@@ -9,9 +9,14 @@ namespace WordCounter.Tests
   public class SentenceTests
   {
     [TestMethod]
-    public void Get()
+    public void FormatWord_ToLowerCase_String()
     {
-
+      //Arrange
+      Sentence newSentence = new Sentence("Bunny", "Bad Bunny isn't really a bunny.");
+      //Act
+      string result = newSentence.FormatWord();
+      //Assert
+      Assert.AreEqual(result, "bunny");
     }
   }
 }

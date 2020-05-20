@@ -9,6 +9,13 @@ namespace WordCounter.Tests
   public class WordTests
   {
     [TestMethod]
+    public void WordConstructor_ConstructsAWord_Word()
+    {
+      Word newWord = new Word ("bunny");
+      Assert.AreEqual(typeof(Word), newWord.GetType());
+    }
+
+    [TestMethod]
     public void FormatWord_ToLowerCase_String()
     {
       //Arrange

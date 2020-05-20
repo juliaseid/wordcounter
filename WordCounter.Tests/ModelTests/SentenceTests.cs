@@ -8,6 +8,12 @@ namespace WordCounter.Tests
   [TestClass]
   public class SentenceTests
   {
+    [TestMethod]
+    public void SentenceConstructor_ConstructsASentence_Sentence()
+    {
+      Sentence newSentence = new Sentence ("Bad Bunny isn't really a bunny.");
+      Assert.AreEqual(typeof(Sentence), newSentence.GetType());
+    }
 
     [TestMethod]
     public void FormatSentence_ToLowerCase_String()
